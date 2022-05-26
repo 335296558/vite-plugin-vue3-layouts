@@ -26,7 +26,8 @@ export default function vitePluginVueLayouts(opt={}) {
     opt.plugins.forEach(pluginPath => {
         const importName = getMixName()
         if (pluginPath.indexOf(':no-use')>=0) {
-            imports+=`import ${importName} from '${pluginPath}';`
+            const newPath = pluginPath.replace(/:no-use/g,'')
+            imports+=`\nimport ${importName} from '${newPath}';`
         } else {
             imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(${importName});`
         }
@@ -43,13 +44,11 @@ export default function vitePluginVueLayouts(opt={}) {
         // },
         async load(id, code) {
             if (id.indexOf('main.js')>=0) {
-                return `\n
-                    \n
-                    import { createApp } from 'vue'
-                    import App from '${__dirname}/App.vue'
-                    const VueApp = createApp(App);
+                return `\nimport { createApp } from 'vue'
+                    \nimport App from '${__dirname}/App.vue'
+                    \nconst VueApp = createApp(App);
                     \n${imports}
-                    VueApp.mount('#app')
+                    \nVueApp.mount('#app')
                 \n`;
             }
         }
