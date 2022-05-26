@@ -32,5 +32,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "vite-plugin-vue-layouts": "^1.0.0"
+  }
 }
