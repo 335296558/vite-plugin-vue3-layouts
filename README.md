@@ -12,9 +12,10 @@
     然后你的src目录下必需要用layouts/default.vue 与layouts/noAuth.vue 文件，请手动增加。
     noAuth.vue用于无权限访问的页面
     default.vue用于有权限访问的页面
-    例如：登录页、注册页、404页面啊就设置layout: 'noAuth', 然后就走noAuth.vue页面
-    如果不设置layout 默认：'default'
+    
 ```js
+    // 例如：登录页、注册页、404页面啊就设置layout: 'noAuth', 然后就走noAuth.vue页面
+    // 如果不设置layout 默认：'default' 那肯定就走default.vue页面了
     export default {
         layout: 'noAuth', // 默认：'default'
     }
