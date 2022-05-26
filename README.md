@@ -30,10 +30,10 @@
 #### vite 使用说明
 ```js
     // vite.config.js
-    import vitePluginVueLayouts from 'vite-plugin-vue3-layouts'
+    import Layouts from 'vite-plugin-vue3-layouts'
     export default {
         plugins: [
-            vitePluginVueLayouts()
+            Layouts()
         ]
     };
 ```
@@ -43,10 +43,10 @@
     如下代码，
 ```js
     // vite.config.js
-    import vitePluginVueLayouts from 'vite-plugin-vue3-layouts'
+    import Layouts from 'vite-plugin-vue3-layouts'
     export default {
         plugins: [
-            vitePluginVueLayouts({
+            Layouts({
                 plugins:[
                     // 相当于 import xxx from 'auto-vue-router'
                     // vue.use(xxx)
