@@ -1,6 +1,6 @@
 # vite-plugin-vue3-layouts
 #### 介绍
-    vite-plugin-vue3-layouts 是一个让项目开箱即用的layout布局插件
+    vite-plugin-vue3-layouts 是一个基于vite+vue3让项目开箱即用的layout布局插件
     通过页面设置layout，例如：layout: 'noAuth', 访问不同页面可以给不同的公共布局
 
     要安装vue-router@4 以上版本
