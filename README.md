@@ -7,7 +7,7 @@
 
 #### 注意
     启用后你本地原有的App.vue|main.js将会失效，插件内会返回App.vue|main.js
-    如果你需要插件导入，vue.use 可以这样，请看下面plugins说明
+    如果你需要插件导入，vue.use设置，请看下面plugins说明
 
 #### 安装
     yarn add vite-plugin-vue-layouts -D
