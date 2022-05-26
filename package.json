@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-vue3-layouts",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -33,9 +33,6 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "vite-plugin-vue3-layouts": "^1.0.0"
-  },
   "description": "vite-plugin-vue3-layouts 是一个让项目开箱即用的layout布局插件\r     通过页面设置layout，例如：layout: 'noAuth', 访问不同页面可以给不同的公共布局",
   "bugs": {
     "url": "https://github.com/335296558/vite-plugin-vue3-layouts/issues"
