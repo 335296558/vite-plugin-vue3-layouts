@@ -25,28 +25,32 @@ function setLayout(layout='default') {
     LayoutComponentName.value = markRaw(layout=='noAuth'? NoAuthLayout: DefaultLayout)
 }
 const show = ref(true)
-$router.isReady().then((e) => {
-    try {
-        const cuuRouteItem = $route.matched[0] || null
-        if (cuuRouteItem) {
-            const cuurPage = cuuRouteItem.components.default
-            setLayout(cuurPage.layout)
-        }
-        watch($route, (newRoute) => {
-            const item = newRoute.matched[0] || null
-            if (item) {
-                const page = item.components.default
-                setLayout(page.layout)
+if ($router) {
+    $router.isReady().then((e) => {
+        try {
+            const cuuRouteItem = $route.matched[0] || null
+            if (cuuRouteItem) {
+                const cuurPage = cuuRouteItem.components.default
+                setLayout(cuurPage.layout)
             }
-            show.value = false
-			setTimeout(()=>{
-				show.value = true
-			}, 380)
-        })
-    } catch (error) {
-        console.error(error)
-    }
-})
+            watch($route, (newRoute) => {
+                const item = newRoute.matched[0] || null
+                if (item) {
+                    const page = item.components.default
+                    setLayout(page.layout)
+                }
+                show.value = false
+                setTimeout(()=>{
+                    show.value = true
+                }, 380)
+            })
+        } catch (error) {
+            console.error(error)
+        }
+    })
+} else {
+    console.error('Do you want to install vue-router@4')
+}
 </script>
 <style scoped>
 /* 可以设置不同的进入和离开动画   */
