@@ -1,10 +1,10 @@
 {
-  "name": "vite-plugin-vue-layouts",
+  "name": "vite-plugin-vue3-layouts",
   "version": "0.0.1",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/335296558/vite-plugin-vue-layouts.git"
+    "url": "git+https://github.com/335296558/vite-plugin-vue3-layouts.git"
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",
@@ -18,7 +18,7 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "keywords": [
-    "vite-plugin-vue-layouts",
+    "vite-plugin-vue3-layouts",
     "layout"
   ],
   "scripts": {
@@ -27,20 +27,20 @@
     "test": "node test/test.js",
     "pretest": "npm run build",
     "deploy": "npm publish --registry=https://registry.npmjs.org/",
-    "remove": "npm unpublish --registry https://registry.npmjs.org/ vite-plugin-vue-layouts@请输入你的版本号",
-    "deprecate": "npm deprecate vite-plugin-vue-layouts@'< 1.0.8' 'bug'"
+    "remove": "npm unpublish --registry https://registry.npmjs.org/ vite-plugin-vue3-layouts@请输入你的版本号",
+    "deprecate": "npm deprecate vite-plugin-vue3-layouts@'< 1.0.8' 'bug'"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "vite-plugin-vue-layouts": "^1.0.0"
+    "vite-plugin-vue3-layouts": "^1.0.0"
   },
-  "description": "vite-plugin-vue-layouts 是一个让项目开箱即用的layout布局插件\r     通过页面设置layout，例如：layout: 'noAuth', 访问不同页面可以给不同的公共布局",
+  "description": "vite-plugin-vue3-layouts 是一个让项目开箱即用的layout布局插件\r     通过页面设置layout，例如：layout: 'noAuth', 访问不同页面可以给不同的公共布局",
   "bugs": {
-    "url": "https://github.com/335296558/vite-plugin-vue-layouts/issues"
+    "url": "https://github.com/335296558/vite-plugin-vue3-layouts/issues"
   },
-  "homepage": "https://github.com/335296558/vite-plugin-vue-layouts#readme",
+  "homepage": "https://github.com/335296558/vite-plugin-vue3-layouts#readme",
   "author": "",
   "license": "ISC"
 }

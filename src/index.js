@@ -4,7 +4,7 @@
  * @author 凡尘
  * @date 2022/05
  * @author 335296558@qq.com
- * @name vite-plugin-vue-layouts || vitePluginVueLayouts
+ * @name vite-plugin-vue3-layouts || vitePluginVue3Layouts
  */
 
 import fs from 'fs';
@@ -32,7 +32,7 @@ export default function vitePluginVueLayouts(opt={}) {
         }
     });
     return {
-        name: 'vite-plugin-vue-layouts',
+        name: 'vite-plugin-vue3-layouts',
         // transformIndexHtml(html) {
         //     return `${html}\n`
         // },

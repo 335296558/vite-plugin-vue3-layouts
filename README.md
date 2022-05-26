@@ -1,6 +1,6 @@
-# vite-plugin-vue-layouts
+# vite-plugin-vue3-layouts
 #### 介绍
-    vite-plugin-vue-layouts 是一个让项目开箱即用的layout布局插件
+    vite-plugin-vue3-layouts 是一个让项目开箱即用的layout布局插件
     通过页面设置layout，例如：layout: 'noAuth', 访问不同页面可以给不同的公共布局
 
     要安装vue-router@4 以上版本
@@ -23,14 +23,14 @@
     }
 ```
 #### 安装
-    yarn add vite-plugin-vue-layouts -D
-    npm i vite-plugin-vue-layouts -D
-    pnpm install vite-plugin-vue-layouts -D
+    yarn add vite-plugin-vue3-layouts -D
+    npm i vite-plugin-vue3-layouts -D
+    pnpm install vite-plugin-vue3-layouts -D
 
 #### vite 使用说明
 ```js
     // vite.config.js
-    import vitePluginVueLayouts from 'vite-plugin-vue-layouts'
+    import vitePluginVueLayouts from 'vite-plugin-vue3-layouts'
     export default {
         plugins: [
             vitePluginVueLayouts()
@@ -43,7 +43,7 @@
     如下代码，
 ```js
     // vite.config.js
-    import vitePluginVueLayouts from 'vite-plugin-vue-layouts'
+    import vitePluginVueLayouts from 'vite-plugin-vue3-layouts'
     export default {
         plugins: [
             vitePluginVueLayouts({
