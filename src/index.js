@@ -19,7 +19,8 @@ export default function vitePluginVueLayouts(opt={}) {
     const ModuleId = 'vue-layouts'
     const resolvedModuleId = '\0' + ModuleId
     opt = Object.assign({
-        plugins:[]
+        plugins:[],
+        id: 'app' // 实例化的ID 
     }, opt)
 
     let imports = ''
@@ -29,7 +30,7 @@ export default function vitePluginVueLayouts(opt={}) {
             const newPath = pluginPath.replace(/:no-use/g,'')
             imports+=`\nimport ${importName} from '${newPath}';`
         } else {
-            imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(${importName}(vue));`
+            imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(${importName}(${opt.id}));`
         }
     });
     return {
