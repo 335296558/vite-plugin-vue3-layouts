@@ -49,7 +49,8 @@
             Layouts({
                 plugins:[
                     // 相当于 import xxx from 'auto-vue-router'
-                    // vue.use(xxx)
+                    // const VueApp = createApp(App);
+                    // VueApp.use(xxx) ||  VueApp.use(xxx(VueApp))
                     'auto-vue-router'
                     // 相当于 import xxxx from './src/plugins/xxxx'
                     './src/plugins/xxxx:no-use'

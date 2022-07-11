@@ -29,7 +29,7 @@ export default function vitePluginVueLayouts(opt={}) {
             const newPath = pluginPath.replace(/:no-use/g,'')
             imports+=`\nimport ${importName} from '${newPath}';`
         } else {
-            imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(${importName});`
+            imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(${importName}(vue));`
         }
     });
     return {
