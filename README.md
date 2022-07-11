@@ -47,6 +47,7 @@
     export default {
         plugins: [
             Layouts({
+                id: 'VueApp', //请必需设置一至的ID, index.html 中实例化的 ID ，例如：<div id="VueApp"></div>
                 plugins:[
                     // 相当于 import xxx from 'auto-vue-router'
                     // const VueApp = createApp(App);

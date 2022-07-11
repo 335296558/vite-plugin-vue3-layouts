@@ -20,7 +20,7 @@ export default function vitePluginVueLayouts(opt={}) {
     const resolvedModuleId = '\0' + ModuleId
     opt = Object.assign({
         plugins:[],
-        id: 'app' // 实例化的ID 
+        id: 'VueApp' // 实例化的ID 
     }, opt)
 
     let imports = ''
@@ -30,7 +30,7 @@ export default function vitePluginVueLayouts(opt={}) {
             const newPath = pluginPath.replace(/:no-use/g,'')
             imports+=`\nimport ${importName} from '${newPath}';`
         } else {
-            imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(${importName}(${opt.id}));`
+            imports+=`import ${importName} from '${pluginPath}';\nVueApp.use(typeof ${importName}=='function'?${importName}(${opt.id}):${importName});`
         }
     });
     return {
@@ -45,11 +45,12 @@ export default function vitePluginVueLayouts(opt={}) {
         // },
         async load(id, code) {
             if (id.indexOf('main.js')>=0) {
+                const APP_NAME = getMixName()
                 return `\nimport { createApp } from 'vue'
-                    \nimport App from '${__dirname}/App.vue'
-                    \nconst VueApp = createApp(App);
+                    \nimport ${APP_NAME} from '${__dirname}/App.vue'
+                    \nconst ${opt.id} = createApp(${APP_NAME});
                     \n${imports}
-                    \nVueApp.mount('#app')
+                    \nVueApp.mount('#${opt.id}')
                 \n`;
             }
         }
