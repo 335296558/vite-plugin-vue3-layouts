@@ -7,7 +7,7 @@
  * @name vite-plugin-vue3-layouts || vitePluginVue3Layouts
  */
 
-import fs from 'fs';
+// import fs from 'fs';
 const getMixName = ()=> {
     let str = '';
     for(let i =0;i<6;i++){
