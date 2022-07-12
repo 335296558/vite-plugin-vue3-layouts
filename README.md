@@ -35,16 +35,16 @@
         plugins: [
             Layouts()
         ],
-        // 务必要加上下面的代码，否则vite-plugin-auto-vue-router插件无法热更新
+        // 务必要加上下面的代码，否则vite-plugin-vue3-layouts插件无法热更新
         server: {
             watch: {
-                ignored: ['!**/node_modules/vite-plugin-auto-vue-router/**']
+                ignored: ['!**/node_modules/vite-plugin-vue3-layouts/**']
             }
         },
         // 被监听的包必须被排除在优化之外，
         // 以便它能出现在依赖关系图中并触发热更新。
         optimizeDeps: {
-            exclude: ['vite-plugin-auto-vue-router']
+            exclude: ['vite-plugin-vue3-layouts']
         }
     };
 ```
